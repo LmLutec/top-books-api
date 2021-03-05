@@ -20,7 +20,7 @@ class Scraper
           genre = container.css(".books-front-meta-genre").text.split("Genre:").pop
           description = container.css(".books-front-meta-short").children[0].text 
           
-          Books.new(title, author, release_date, genre, description)  
+          Books.create(book: {title, author, release_date, genre, description})  
         end 
     end
     
