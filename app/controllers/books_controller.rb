@@ -1,4 +1,4 @@
-require 'pry'
+# require 'pry'
 
 class BooksController < ApplicationController
     # attr_accessor :title, :author, :release_date, :genre, :description
@@ -10,7 +10,8 @@ class BooksController < ApplicationController
     end 
 
     def create 
-        book = Book.create(book_params)
+        # book = Book.create(book_params)
+        Scraper.new.combine_info
 byebug
     end 
 #    def initialize(title, author, release_date, genre, description)
